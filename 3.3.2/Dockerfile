@@ -25,7 +25,7 @@ RUN apt-get remove -y binutils
 RUN apt-get install -y gdal-bin=${GDAL_VERSION}+dfsg-2~focal2
 
 # Install GDAL development libraries
-RUN apt-get install -y libgdal-dev={GDAL_VERSION}+dfsg-2~focal2 g++
+RUN apt-get install -y libgdal-dev=${GDAL_VERSION}+dfsg-2~focal2 g++
 
 # cleanup cahe dependencies for apt
 RUN apt-get clean \
