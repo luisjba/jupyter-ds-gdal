@@ -51,8 +51,8 @@ driver = ogr.GetDriverByName("OpenFileGDB")
 # opening the FileGDB
 try:
     gdb = driver.Open(gdb_path, 0)
-except Exception, e:
-    print e
+except Exception as e:
+    print(e)
     sys.exit()
 
 # list to store layers'names
@@ -68,7 +68,7 @@ featsClassList.sort()
 
 # printing
 for featsClass in featsClassList:
-    print featsClass
+    print(featsClass)
 
 # clean close
 del gdb
