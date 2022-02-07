@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    jupyter:
+        image: luisjba/jupyter-ds-gdal:3.3.2
+        environment: 
+            JUPYTER_ENABLE_LAB: "yes"
+        command: ""
+        ports: 
+            - 8888:8888
+        volumes: 
+            - ./work:/home/jovyan/work
